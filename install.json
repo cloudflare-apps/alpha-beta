@@ -1,45 +1,36 @@
 {
-  "$schema": "http://json.schemastore.org/install",
+  "__$schema": "http://json.schemastore.org/install",
   "resources": {
-    "body": [
+    "edge": [
       {
-        "type": "style",
-        "src": "./source/app.css"
-      },
-      {
-        "type": "script",
-        "src": "./source/app.js"
+        "src": "./source/edge.js"
       }
     ]
   },
   "preview": {
-    "handlers": [
-      {
-        "options": ["_default"],
-        "execute": "INSTALL_SCOPE.setOptions(INSTALL_OPTIONS)"
-      }
-    ]
+    "hide": true
   },
   "options": {
     "properties": {
-      "location": {
-        "title": "Message Location",
-        "description": "Where should the message appear?",
+      "pages": {
+        "title": "Pages",
         "order": 0,
-        "type": "object",
-        "format": "element",
-        "default": {
-          "selector": "body",
-          "method": "prepend"
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "distribution": {
+              "order": 0,
+              "title": "Traffic Distribution",
+              "description": "What percentage of traffic should be sent to this URL?",
+              "type": "object",
+              "format": "number",
+              "units": [
+                "%"
+              ]
+            }
+          }
         }
-      },
-      "message": {
-        "title": "Message",
-        "description": "A short example message.",
-        "type": "string",
-        "format": "richtext",
-        "order": 1,
-        "default": "<p>Welcome to Cloudflare Apps! This is our example app.</p><p>Download this app every time you want to make a new project.</p>"
       }
     }
   }

@@ -1,22 +1,21 @@
 {
-  "name": "@cloudflare-apps/example",
+  "name": "@cloudflare-apps/alpha-beta",
   "version": "0.0.0",
   "description": "",
-  "main": "app.js",
   "scripts": {
     "lint": "standard --fix ./source/**/*.js || true"
   },
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cloudflare-apps/example-app.git"
+    "url": "git+https://github.com/cloudflare-apps/alpha-beta.git"
   },
   "author": "Cloudflare Inc.",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cloudflare-apps/example-app/issues"
+    "url": "https://github.com/cloudflare-apps/alpha-beta/issues"
   },
-  "homepage": "https://github.com/cloudflare-apps/example-app#readme",
+  "homepage": "https://github.com/cloudflare-apps/alpha-beta#readme",
   "dependencies": {},
   "devDependencies": {
     "standard": "^9.0.2"
@@ -28,6 +27,10 @@
       "INSTALL_SCOPE",
       "INSTALL_PRODUCT",
       "INSTALL_ID"
+    ],
+    "env": [
+      "browser",
+      "worker"
     ]
   }
 }
